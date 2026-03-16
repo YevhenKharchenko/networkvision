@@ -1,0 +1,126 @@
+.gameplay-section {
+}
+
+.gameplay-bg-wrapper {
+  padding-top: 40px;
+  padding-bottom: 48px;
+
+  @include media(desktop) {
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+}
+
+.gameplay-container {
+}
+
+.gameplay-title-wrapper {
+  @include media(desktop) {
+  }
+}
+
+.gameplay-title {
+  @include media(desktop) {
+  }
+}
+
+.gameplay-subtitle {
+  @include media(desktop) {
+  }
+}
+
+.gameplay-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  @include media(desktop) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 103px;
+  }
+}
+
+.gameplay-list-item {
+  box-shadow: 0 0 24px rgba(80, 37, 102, 0.8);
+  background: linear-gradient(180deg, #1d092b 0%, #621e91 100%);
+  border-radius: 24px;
+  padding: 40px 18px;
+  width: 100%;
+  max-width: 343px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  &:nth-child(2) {
+    .gameplay-features-item-circle {
+      background: #944056;
+    }
+  }
+
+  @include media(desktop) {
+    max-width: 480px;
+  }
+}
+
+.gameplay-item-title {
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #e2dbee;
+
+  @include media(desktop) {
+  }
+}
+
+.gameplay-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media(desktop) {
+  }
+}
+
+.gameplay-features-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  @include media(desktop) {
+  }
+}
+
+.gameplay-features-item-circle {
+  min-width: 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: #569f16;
+
+  @include media(desktop) {
+  }
+}
+
+.gameplay-features-item-text {
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #e2dbee;
+
+  @include media(desktop) {
+  }
+}
+
+.gameplay-img {
+  @include media(desktop) {
+  }
+}
