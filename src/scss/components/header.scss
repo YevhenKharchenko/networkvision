@@ -1,5 +1,5 @@
 .header {
-  background: #1d092b;
+  background: #212d44;
   padding: 12px 0;
   position: fixed;
   width: 100%;
@@ -7,7 +7,7 @@
   z-index: 10;
 
   @include media(desktop) {
-    padding: 8px 0;
+    padding: 16px 0;
   }
 }
 
@@ -15,7 +15,7 @@
   padding: 0 24px;
 
   @include media(desktop) {
-    padding: 0 80px;
+    padding: 0 120px;
   }
 }
 
@@ -36,7 +36,6 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    gap: 55px;
     width: 100%;
   }
 }
@@ -46,25 +45,27 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 90px;
 }
 
 .nav-list-link {
   @include media(desktop) {
-    padding: 8px 0;
+    padding: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto Flex', sans-serif;
-    font-weight: 200;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
     font-size: 12px;
-    text-align: center;
-    color: #e2dbee;
+    line-height: 1.5;
+    color: #dbe2f0;
     opacity: 0.8;
     width: 100%;
+    max-width: max-content;
     height: 100%;
     position: relative;
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    transition:
+      color 0.3s ease-in-out,
+      text-shadow 0.3s ease-in-out;
 
     &::after {
       content: '';
@@ -73,10 +74,11 @@
       bottom: 0;
       width: 100%;
       height: 1px;
-      background-color: #e7c713;
+      background-color: #f08b40;
       transform: scaleX(0);
       transform-origin: center;
-      transition: transform 0.3s ease-in-out,
+      transition:
+        transform 0.3s ease-in-out,
         color 0.3s ease-in-out 0.3s ease-in-out,
         text-shadow 0.3s ease-in-out 0.3s ease-in-out,
         opacity 0.3s ease-in-out 0.3s ease-in-out;
