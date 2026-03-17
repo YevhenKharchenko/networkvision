@@ -1,7 +1,13 @@
 .faq-section {
+  background: #212d44;
+
+  @include media(desktop) {
+  }
 }
 
 .faq-title {
+  color: #dbe2f0;
+
   @include media(desktop) {
   }
 }
@@ -11,8 +17,8 @@
   padding-bottom: 48px;
 
   @include media(desktop) {
-    padding-top: 56px;
-    padding-bottom: 58px;
+    padding-top: 48px;
+    padding-bottom: 56px;
   }
 }
 
@@ -26,7 +32,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 32px;
 
   @include media(desktop) {
   }
@@ -44,18 +50,19 @@
 }
 
 .faq-item-question-wrapper {
-  padding: 12px 24px;
+  border-bottom: 1px solid #8091b2;
+  padding: 8px 0px;
 
   @include media(desktop) {
   }
 }
 
 .faq-item-answer-wrapper {
-  padding-left: 24px;
-  padding-right: 24px;
   max-height: 0;
   overflow: hidden;
-  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+  transition:
+    height 0.3s ease-in-out,
+    opacity 0.3s ease-in-out,
     padding 0.3s ease-in-out;
   opacity: 0;
 
@@ -64,9 +71,6 @@
 }
 
 .faq-top-text-btn {
-  border-bottom: 2px solid;
-  border-image: linear-gradient(to right, #e7c713, #1d092b) 1;
-  padding: 8px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,26 +92,27 @@
 }
 
 .faq-btn-text {
-  font-family: 'Chelsea Market', sans-serif;
-  font-weight: 400;
-  font-size: 24px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #1d092b;
+  color: #dbe2f0;
   text-align: left;
 
   @include media(desktop) {
+    font-size: 20px;
   }
 }
 
 .faq-bottom-text {
-  font-family: 'Roboto Flex', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
   line-height: 1.5;
-  color: #1d092b;
+  color: #dbe2f0;
 
   @include media(desktop) {
+    font-size: 16px;
   }
 }
 
@@ -125,13 +130,10 @@
 }
 
 .faq-list-item.faq-open .faq-item-answer-wrapper {
-  padding-top: 4px;
-  padding-bottom: 12px;
+  padding-top: 16px;
   opacity: 1;
   max-height: 500px;
 
   @include media(desktop) {
-    padding-top: 5px;
-    padding-bottom: 12px;
   }
 }

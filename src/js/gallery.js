@@ -3,6 +3,7 @@ import 'swiper/css/bundle';
 
 const galleryLeftArrow = document.getElementById('galleryLeftArrow');
 const galleryRightArrow = document.getElementById('galleryRightArrow');
+const galleryDots = document.querySelectorAll('.gallery-dot');
 
 let gallerySwiper;
 
@@ -17,11 +18,12 @@ gallerySwiper = new Swiper('.gallery-swiper-container', {
   speed: 500,
   allowTouchMove: true,
   grabCursor: true,
+  watchOverflow: true,
   breakpoints: {
     1440: {
+      centeredSlides: false,
       slidesPerView: 'auto',
-      initialSlide: 2,
-      spaceBetween: 24,
+      spaceBetween: 40,
     },
   },
 
@@ -31,6 +33,13 @@ gallerySwiper = new Swiper('.gallery-swiper-container', {
       updateGalleryArrows(swiper);
     },
     slideChange(swiper) {
+      updateGalleryArrows(swiper);
+      updateGalleryDots(swiper.realIndex);
+    },
+    reachEnd(swiper) {
+      updateGalleryArrows(swiper);
+    },
+    reachBeginning(swiper) {
       updateGalleryArrows(swiper);
     },
   },
@@ -49,4 +58,16 @@ galleryLeftArrow.addEventListener('click', () => {
 
 galleryRightArrow.addEventListener('click', () => {
   gallerySwiper.slideNext();
+});
+
+function updateGalleryDots(index) {
+  galleryDots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+galleryDots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    gallerySwiper.slideTo(index);
+  });
 });

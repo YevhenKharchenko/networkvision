@@ -1,8 +1,12 @@
-.gameplay-section {
+.features-section {
+  background: #212d44;
+
+  @include media(desktop) {
+  }
 }
 
-.gameplay-bg-wrapper {
-  padding-top: 46px;
+.features-bg-wrapper {
+  padding-top: 40px;
   padding-bottom: 48px;
 
   @include media(desktop) {
@@ -11,27 +15,29 @@
   }
 }
 
-.gameplay-container {
+.features-container {
 }
 
-.gameplay-title-wrapper {
+.features-title-wrapper {
   @include media(desktop) {
   }
 }
 
-.gameplay-title {
+.features-title {
+  color: #dbe2f0;
+
   @include media(desktop) {
   }
 }
 
-.gameplay-text {
+.features-text {
   font-family: 'Mulish', sans-serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5;
   text-align: center;
-  color: #191c2e;
-  margin-bottom: 20px;
+  color: #dbe2f0;
+  margin-bottom: 32px;
 
   @include media(desktop) {
     font-size: 20px;
@@ -39,7 +45,7 @@
   }
 }
 
-.gameplay-content-wrapper {
+.features-content-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,55 +58,44 @@
   }
 }
 
-.gameplay-img {
+.features-img {
   @include media(desktop) {
-    min-width: 323px;
+    min-width: 343px;
   }
 }
 
-.gameplay-list {
+.features-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 
   @include media(desktop) {
-    max-width: max-content;
+    max-width: 250px;
   }
 }
 
-.gameplay-list-item {
+.features-list-item {
+  background: #8091b2;
+  border: 1px solid #dbe2f0;
+  border-radius: 16px;
+  padding: 23px;
   display: flex;
   align-items: center;
-  gap: 16px;
-
-  @include media(desktop) {
-  }
-}
-
-.gameplay-item-number {
-  background: #212d44;
-  border-radius: 10px;
-  min-width: 46px;
-  width: 46px;
-  height: 46px;
-  font-family: 'Mulish', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.5;
-  color: #8091b2;
-  display: flex;
   justify-content: center;
-  align-items: center;
+  width: 100%;
+  max-width: 303px;
 
   @include media(desktop) {
+    max-width: 250px;
   }
 }
 
-.gameplay-item-text {
+.features-item-text {
   font-family: 'Mulish', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.5;
+  text-align: center;
   color: #191c2e;
 
   @include media(desktop) {
